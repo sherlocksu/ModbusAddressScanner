@@ -29,14 +29,21 @@ namespace ModbusAddressScanner
             cboPort = new ComboBox();
             label1 = new Label();
             gbControl = new GroupBox();
+            tb_readRegisterCount = new TextBox();
+            label7 = new Label();
+            tb_readRegisterStart = new TextBox();
+            label6 = new Label();
+            label9 = new Label();
+            chkFunc01 = new CheckBox();
+            chkFunc02 = new CheckBox();
+            chkFunc03 = new CheckBox();
+            chkFunc04 = new CheckBox();
+            label8 = new Label();
+            tb_readTimeout = new TextBox();
             btnStop = new Button();
             btnStart = new Button();
             gbLog = new GroupBox();
             txtLog = new TextBox();
-            label6 = new Label();
-            tb_readRegisterStart = new TextBox();
-            label7 = new Label();
-            tb_readRegisterCount = new TextBox();
             gbSerialConfig.SuspendLayout();
             gbControl.SuspendLayout();
             gbLog.SuspendLayout();
@@ -54,95 +61,127 @@ namespace ModbusAddressScanner
             gbSerialConfig.Controls.Add(label2);
             gbSerialConfig.Controls.Add(cboPort);
             gbSerialConfig.Controls.Add(label1);
-            gbSerialConfig.Location = new Point(12, 12);
+            gbSerialConfig.Controls.Add(tb_readTimeout);
+            gbSerialConfig.Controls.Add(label8);
+            gbSerialConfig.Location = new Point(22, 20);
+            gbSerialConfig.Margin = new Padding(6, 5, 6, 5);
             gbSerialConfig.Name = "gbSerialConfig";
-            gbSerialConfig.Size = new Size(711, 100);
+            gbSerialConfig.Padding = new Padding(6, 5, 6, 5);
+            gbSerialConfig.Size = new Size(1320, 165);
             gbSerialConfig.TabIndex = 0;
             gbSerialConfig.TabStop = false;
             gbSerialConfig.Text = "串口配置";
+            //
+            // label8
+            //
+            label8.AutoSize = true;
+            label8.Location = new Point(370, 114);
+            label8.Margin = new Padding(6, 0, 6, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(150, 28);
+            label8.TabIndex = 10;
+            label8.Text = "读超时(ms):";
+            //
+            // tb_readTimeout
+            //
+            tb_readTimeout.Location = new Point(545, 109);
+            tb_readTimeout.Margin = new Padding(6, 5, 6, 5);
+            tb_readTimeout.Name = "tb_readTimeout";
+            tb_readTimeout.Size = new Size(145, 34);
+            tb_readTimeout.TabIndex = 11;
             // 
             // cboStopBits
             // 
             cboStopBits.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboStopBits.Location = new Point(477, 35);
+            cboStopBits.Location = new Point(886, 58);
+            cboStopBits.Margin = new Padding(6, 5, 6, 5);
             cboStopBits.Name = "cboStopBits";
-            cboStopBits.Size = new Size(80, 25);
+            cboStopBits.Size = new Size(145, 36);
             cboStopBits.TabIndex = 9;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(424, 38);
+            label5.Location = new Point(787, 63);
+            label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new Size(47, 17);
+            label5.Size = new Size(80, 28);
             label5.TabIndex = 8;
             label5.Text = "停止位:";
             // 
             // cboParity
             // 
             cboParity.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboParity.Location = new Point(338, 35);
+            cboParity.Location = new Point(628, 58);
+            cboParity.Margin = new Padding(6, 5, 6, 5);
             cboParity.Name = "cboParity";
-            cboParity.Size = new Size(80, 25);
+            cboParity.Size = new Size(145, 36);
             cboParity.TabIndex = 7;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(285, 38);
+            label4.Location = new Point(529, 63);
+            label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(47, 17);
+            label4.Size = new Size(80, 28);
             label4.TabIndex = 6;
             label4.Text = "校验位:";
             // 
             // cboDataBits
             // 
             cboDataBits.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboDataBits.Location = new Point(199, 35);
+            cboDataBits.Location = new Point(370, 58);
+            cboDataBits.Margin = new Padding(6, 5, 6, 5);
             cboDataBits.Name = "cboDataBits";
-            cboDataBits.Size = new Size(80, 25);
+            cboDataBits.Size = new Size(145, 36);
             cboDataBits.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(146, 38);
+            label3.Location = new Point(271, 63);
+            label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(47, 17);
+            label3.Size = new Size(80, 28);
             label3.TabIndex = 4;
             label3.Text = "数据位:";
             // 
             // cboBaudRate
             // 
             cboBaudRate.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboBaudRate.Location = new Point(60, 66);
+            cboBaudRate.Location = new Point(111, 109);
+            cboBaudRate.Margin = new Padding(6, 5, 6, 5);
             cboBaudRate.Name = "cboBaudRate";
-            cboBaudRate.Size = new Size(110, 25);
+            cboBaudRate.Size = new Size(201, 36);
             cboBaudRate.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(7, 69);
+            label2.Location = new Point(13, 114);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(47, 17);
+            label2.Size = new Size(80, 28);
             label2.TabIndex = 2;
             label2.Text = "波特率:";
             // 
             // cboPort
             // 
             cboPort.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboPort.Location = new Point(60, 35);
+            cboPort.Location = new Point(111, 58);
+            cboPort.Margin = new Padding(6, 5, 6, 5);
             cboPort.Name = "cboPort";
-            cboPort.Size = new Size(80, 25);
+            cboPort.Size = new Size(145, 36);
             cboPort.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(7, 38);
+            label1.Location = new Point(13, 63);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(47, 17);
+            label1.Size = new Size(80, 28);
             label1.TabIndex = 0;
             label1.Text = "端口号:";
             // 
@@ -152,20 +191,122 @@ namespace ModbusAddressScanner
             gbControl.Controls.Add(label7);
             gbControl.Controls.Add(tb_readRegisterStart);
             gbControl.Controls.Add(label6);
+            gbControl.Controls.Add(label9);
+            gbControl.Controls.Add(chkFunc01);
+            gbControl.Controls.Add(chkFunc02);
+            gbControl.Controls.Add(chkFunc03);
+            gbControl.Controls.Add(chkFunc04);
             gbControl.Controls.Add(btnStop);
             gbControl.Controls.Add(btnStart);
-            gbControl.Location = new Point(12, 118);
+            gbControl.Location = new Point(22, 194);
+            gbControl.Margin = new Padding(6, 5, 6, 5);
             gbControl.Name = "gbControl";
-            gbControl.Size = new Size(711, 70);
+            gbControl.Padding = new Padding(6, 5, 6, 5);
+            gbControl.Size = new Size(1320, 200);
             gbControl.TabIndex = 1;
             gbControl.TabStop = false;
             gbControl.Text = "扫描控制";
+            //
+            // label9
+            //
+            label9.AutoSize = true;
+            label9.Location = new Point(13, 118);
+            label9.Margin = new Padding(6, 0, 6, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(130, 28);
+            label9.TabIndex = 6;
+            label9.Text = "读功能码:";
+            //
+            // chkFunc01
+            //
+            chkFunc01.AutoSize = true;
+            chkFunc01.Location = new Point(200, 115);
+            chkFunc01.Margin = new Padding(6, 5, 6, 5);
+            chkFunc01.Name = "chkFunc01";
+            chkFunc01.Size = new Size(120, 32);
+            chkFunc01.TabIndex = 7;
+            chkFunc01.Text = "01 线圈";
+            chkFunc01.UseVisualStyleBackColor = true;
+            //
+            // chkFunc02
+            //
+            chkFunc02.AutoSize = true;
+            chkFunc02.Location = new Point(460, 115);
+            chkFunc02.Margin = new Padding(6, 5, 6, 5);
+            chkFunc02.Name = "chkFunc02";
+            chkFunc02.Size = new Size(170, 32);
+            chkFunc02.TabIndex = 8;
+            chkFunc02.Text = "02 离散输入";
+            chkFunc02.UseVisualStyleBackColor = true;
+            //
+            // chkFunc03
+            //
+            chkFunc03.AutoSize = true;
+            chkFunc03.Checked = true;
+            chkFunc03.CheckState = CheckState.Checked;
+            chkFunc03.Location = new Point(760, 115);
+            chkFunc03.Margin = new Padding(6, 5, 6, 5);
+            chkFunc03.Name = "chkFunc03";
+            chkFunc03.Size = new Size(190, 32);
+            chkFunc03.TabIndex = 9;
+            chkFunc03.Text = "03 保持寄存器";
+            chkFunc03.UseVisualStyleBackColor = true;
+            //
+            // chkFunc04
+            //
+            chkFunc04.AutoSize = true;
+            chkFunc04.Location = new Point(1060, 115);
+            chkFunc04.Margin = new Padding(6, 5, 6, 5);
+            chkFunc04.Name = "chkFunc04";
+            chkFunc04.Size = new Size(190, 32);
+            chkFunc04.TabIndex = 10;
+            chkFunc04.Text = "04 输入寄存器";
+            chkFunc04.UseVisualStyleBackColor = true;
+            // 
+            // tb_readRegisterCount
+            // 
+            tb_readRegisterCount.Location = new Point(730, 48);
+            tb_readRegisterCount.Margin = new Padding(6, 5, 6, 5);
+            tb_readRegisterCount.Name = "tb_readRegisterCount";
+            tb_readRegisterCount.Size = new Size(119, 34);
+            tb_readRegisterCount.TabIndex = 5;
+            tb_readRegisterCount.Text = "1";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(526, 53);
+            label7.Margin = new Padding(6, 0, 6, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(180, 28);
+            label7.TabIndex = 4;
+            label7.Text = "读取寄存器长度：";
+            // 
+            // tb_readRegisterStart
+            // 
+            tb_readRegisterStart.Location = new Point(329, 48);
+            tb_readRegisterStart.Margin = new Padding(6, 5, 6, 5);
+            tb_readRegisterStart.Name = "tb_readRegisterStart";
+            tb_readRegisterStart.Size = new Size(182, 34);
+            tb_readRegisterStart.TabIndex = 3;
+            tb_readRegisterStart.Text = "1";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(13, 53);
+            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(285, 28);
+            label6.TabIndex = 2;
+            label6.Text = "寄存器起始地址（十进制）：";
             // 
             // btnStop
             // 
-            btnStop.Location = new Point(589, 25);
+            btnStop.Location = new Point(1094, 41);
+            btnStop.Margin = new Padding(6, 5, 6, 5);
             btnStop.Name = "btnStop";
-            btnStop.Size = new Size(100, 30);
+            btnStop.Size = new Size(186, 49);
             btnStop.TabIndex = 1;
             btnStop.Text = "停止扫描";
             btnStop.UseVisualStyleBackColor = true;
@@ -173,9 +314,10 @@ namespace ModbusAddressScanner
             // 
             // btnStart
             // 
-            btnStart.Location = new Point(477, 25);
+            btnStart.Location = new Point(886, 41);
+            btnStart.Margin = new Padding(6, 5, 6, 5);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(100, 30);
+            btnStart.Size = new Size(186, 49);
             btnStart.TabIndex = 0;
             btnStart.Text = "开始扫描";
             btnStart.UseVisualStyleBackColor = true;
@@ -184,9 +326,11 @@ namespace ModbusAddressScanner
             // gbLog
             // 
             gbLog.Controls.Add(txtLog);
-            gbLog.Location = new Point(12, 194);
+            gbLog.Location = new Point(22, 405);
+            gbLog.Margin = new Padding(6, 5, 6, 5);
             gbLog.Name = "gbLog";
-            gbLog.Size = new Size(711, 220);
+            gbLog.Padding = new Padding(6, 5, 6, 5);
+            gbLog.Size = new Size(1320, 362);
             gbLog.TabIndex = 2;
             gbLog.TabStop = false;
             gbLog.Text = "扫描日志";
@@ -195,56 +339,24 @@ namespace ModbusAddressScanner
             // 
             txtLog.Dock = DockStyle.Fill;
             txtLog.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLog.Location = new Point(3, 19);
+            txtLog.Location = new Point(6, 32);
+            txtLog.Margin = new Padding(6, 5, 6, 5);
             txtLog.Multiline = true;
             txtLog.Name = "txtLog";
             txtLog.ScrollBars = ScrollBars.Vertical;
-            txtLog.Size = new Size(705, 198);
+            txtLog.Size = new Size(1308, 325);
             txtLog.TabIndex = 0;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(7, 32);
-            label6.Name = "label6";
-            label6.Size = new Size(164, 17);
-            label6.TabIndex = 2;
-            label6.Text = "寄存器起始地址（十进制）：";
-            // 
-            // tb_readRegisterStart
-            // 
-            tb_readRegisterStart.Location = new Point(177, 29);
-            tb_readRegisterStart.Name = "tb_readRegisterStart";
-            tb_readRegisterStart.Size = new Size(100, 23);
-            tb_readRegisterStart.TabIndex = 3;
-            tb_readRegisterStart.Text = "1004";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(283, 32);
-            label7.Name = "label7";
-            label7.Size = new Size(104, 17);
-            label7.TabIndex = 4;
-            label7.Text = "读取寄存器长度：";
-            // 
-            // tb_readRegisterCount
-            // 
-            tb_readRegisterCount.Location = new Point(393, 29);
-            tb_readRegisterCount.Name = "tb_readRegisterCount";
-            tb_readRegisterCount.Size = new Size(66, 23);
-            tb_readRegisterCount.TabIndex = 5;
-            tb_readRegisterCount.Text = "1";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(13F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(735, 426);
+            ClientSize = new Size(1365, 787);
             Controls.Add(gbLog);
             Controls.Add(gbControl);
             Controls.Add(gbSerialConfig);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(6, 5, 6, 5);
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -282,5 +394,12 @@ namespace ModbusAddressScanner
         private TextBox tb_readRegisterStart;
         private Label label6;
         private TextBox tb_readRegisterCount;
+        private Label label8;
+        private TextBox tb_readTimeout;
+        private Label label9;
+        private CheckBox chkFunc01;
+        private CheckBox chkFunc02;
+        private CheckBox chkFunc03;
+        private CheckBox chkFunc04;
     }
 }
